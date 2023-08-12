@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>SYBSC IT</title>
+        <script>
+            function percentage()
+            {
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                alert("Attendance Percentage is: " + ((num1/num2)*100));
+                document.getElementById("result").value = (num1/num2)*100;
+            }
+            function cgpa()
+            {
+                var cnum1 = parseFloat(document.getElementById("cnum1").value);
+                var cnum2 = parseFloat(document.getElementById("cnum2").value);
+                alert("Your CGPA is: " + ((cnum1 + cnum2)/2));
+                document.getElementById("cresult").value = (cnum1+cnum2)/2;
+            }
+            function ecc()
+            {
+                var enum1 = parseFloat(document.getElementById("enum1").value);
+                alert("Your Balance ecc is: " + (20-enum1));
+                document.getElementById("eresult").value = 20-enum1;
+            }
+            /*function summary(num1, num2, enum1,cnum1, cnum2)
+            {
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                if((num1/num2)*100 <= 75)
+                {
+                    alert("You are a defaulter");
+                }
+                else{
+                    alert("You are not a defaulter");
+                }
+                var cnum1 = parseFloat(document.getElementById("cnum1").value);
+                var cnum2 = parseFloat(document.getElementById("cnum2").value);
+                if(((cnum1 + cnum2)/2) < 4)
+                {
+                    alert("Grade: F");
+                }
+                else if (((cnum1 + cnum2)/2) < 5 && ((cnum1 + cnum2)/2 >= 4))
+                {
+                    alert("Grade: E");
+                } 
+                else if(((cnum1 + cnum2)/2) < 6 && ((cnum1 + cnum2)/2 >= 5))
+                {
+                    alert("Grade: D");
+                }
+                else if(((cnum1 + cnum2)/2) < 7 && ((cnum1 + cnum2)/2 >= 6))
+                {
+                    alert("Grade: C");
+                }
+                else if(((cnum1 + cnum2)/2) < 8 && ((cnum1 + cnum2)/2 >= 7))
+                {
+                    alert("Grade: B");
+                }
+                else if(((cnum1 + cnum2)/2) < 9 && ((cnum1 + cnum2)/2 >= 8))
+                {
+                    alert("Grade: A");
+                }
+                else if(((cnum1 + cnum2)/2) < 10 && ((cnum1 + cnum2)/2 >= 9))
+                {
+                    alert("Grade: O");
+                }
+                var enum1 = parseFloat(document.getElementById("enum1").value);
+                alert("Your Balance ecc is: " + (20-enum1));
+
+            }*/
+        </script>
+        <style>
+            body{
+                background-color: #adadad;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            h1{
+                background-color: #501b1d;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>SYBSC IT</h1>
+        <form action = "" method = "get">
+        <fieldset>
+            <legend>ATTENDANCE</legend>
+            <label for="num1">Enter the total lectures you have attended: </label><br>
+            <input type = "text" placeholder = "No. of lectures attended" id = "num1" required><br><br>
+            <label for = "num2">Enter the total lectures: </label><br>
+            <input type = "text" placeholder = "Enter the total lectures" id = "num2" required><br><br>
+            <button onclick = "percentage();">CALCULATE PERCENTAGE</button><br><br>
+            <label for = "result">RESULT: </label>
+            <input type = "text" id = "result" disabled>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>CGPA</legend>
+            <label for=" cnum1">Enter your Semester 1 SGPA: </label>
+            <input type ="text" placeholder = "Enter sem1 sgpa" id = "cnum1" required><br><br>
+            <label for=" cnum2">Enter your Semester 2 SGPA : </label>
+            <input type ="text" placeholder = "Enter sem2 sgpa" id = "cnum2" required><br><br>
+            <button onclick = "cgpa();">CALCULATE CGPA</button><br><br>
+            <label for = "cresult">RESULT: </label>
+            <input type = "text" id = "cresult" disabled>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>ECC</legend>
+            <label for=" enum1">Enter your current ecc points covered: </label>
+            <input type ="text" placeholder = "Enter ecc points" id = "enum1" required><br><br>
+            <button onclick = "ecc();">CHECK BALANCE ECC</button><br><br>
+            <label for = "eresult">RESULT: </label>
+            <input type = "text" id = "eresult" disabled>
+        </fieldset>
+        <br><br>
+        <center>
+            <input type = "reset">
+            <br><br>
+            <!--<button onclick = "summary(num1, num2, enum1,cnum1, cnum2)";>SUMMARY</button>-->
+        </center>
+        </form>
+    </body>
+</html>
